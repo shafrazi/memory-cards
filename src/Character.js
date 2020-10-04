@@ -2,7 +2,7 @@ class Character {
   constructor(name) {
     this.name = name;
     this.isClicked = false;
-    this.image = `/images/${this.name}.jpg`;
+    this.image = process.env.PUBLIC_URL + `/images/${this.name}.jpg`;
   }
 }
 

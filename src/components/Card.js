@@ -12,7 +12,7 @@ class Card extends React.Component {
         <div className="card-content">
           <img
             className="card-image"
-            src={require(this.props.character.image)}
+            src={this.props.character.image}
             alt={this.props.character.name}
           />
           <p className="card-name">{this.props.character.name}</p>
