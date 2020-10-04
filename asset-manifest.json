@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/memory-cards/static/css/main.627be880.chunk.css",
+    "main.js": "/memory-cards/static/js/main.0242143e.chunk.js",
+    "main.js.map": "/memory-cards/static/js/main.0242143e.chunk.js.map",
+    "runtime-main.js": "/memory-cards/static/js/runtime-main.96810f88.js",
+    "runtime-main.js.map": "/memory-cards/static/js/runtime-main.96810f88.js.map",
+    "static/js/2.624f2c5e.chunk.js": "/memory-cards/static/js/2.624f2c5e.chunk.js",
+    "static/js/2.624f2c5e.chunk.js.map": "/memory-cards/static/js/2.624f2c5e.chunk.js.map",
+    "index.html": "/memory-cards/index.html",
+    "precache-manifest.e87043324f2fa8ae37a37bfb19a4c7a4.js": "/memory-cards/precache-manifest.e87043324f2fa8ae37a37bfb19a4c7a4.js",
+    "service-worker.js": "/memory-cards/service-worker.js",
+    "static/css/main.627be880.chunk.css.map": "/memory-cards/static/css/main.627be880.chunk.css.map",
+    "static/js/2.624f2c5e.chunk.js.LICENSE.txt": "/memory-cards/static/js/2.624f2c5e.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/memory-cards/static/media/adamwarrenpro.b3431dba.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.96810f88.js",
+    "static/js/2.624f2c5e.chunk.js",
+    "static/css/main.627be880.chunk.css",
+    "static/js/main.0242143e.chunk.js"
+  ]
+}
