@@ -1,6 +1,7 @@
 class Character {
   constructor(name) {
     this.name = name;
+    this.isClicked = false;
     this.image = `/images/${this.name}.jpg`;
   }
 }

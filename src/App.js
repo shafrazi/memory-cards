@@ -10,6 +10,7 @@ class App extends React.Component {
       currentScore: 0,
       bestScore: 0,
       characters: characters,
+      isGameOver: false,
     };
   }
 
@@ -21,9 +22,47 @@ class App extends React.Component {
     return array;
   }
 
-  handleClick = () => {
-    this.setState({
-      currentScore: this.state.currentScore + 1,
+  handleClick = (character) => {
+    if (character.isClicked) {
+      this.setState((prevState) => {
+        if (prevState.currentScore > prevState.bestScore) {
+          return {
+            isGameOver: true,
+            bestScore: prevState.currentScore,
+            currentScore: 0,
+          };
+        } else {
+          return {
+            isGameOver: true,
+            currentScore: 0,
+          };
+        }
+      });
+    } else {
+      this.setState((prevState) => {
+        for (let i = 0; i < prevState.characters.length; i++) {
+          if (character === prevState.characters[i]) {
+            prevState.characters[i].isClicked = true;
+          }
+        }
+
+        return {
+          characters: prevState.characters,
+          currentScore: this.state.currentScore + 1,
+        };
+      });
+    }
+  };
+
+  refreshCharacters = () => {
+    this.setState((prevState) => {
+      for (let i = 0; i < prevState.characters.length; i++) {
+        prevState.characters[i].isClicked = false;
+      }
+
+      return {
+        characters: prevState.characters,
+      };
     });
   };
 
@@ -39,6 +78,13 @@ class App extends React.Component {
       const randomCharacters = this.shuffleArray(this.state.characters);
       this.setState({
         characters: randomCharacters,
+      });
+    }
+
+    if (prevState.isGameOver) {
+      this.refreshCharacters();
+      this.setState({
+        isGameOver: false,
       });
     }
   }
